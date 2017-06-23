@@ -1,0 +1,108 @@
+* {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.main_container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 32px;
+  color: #2a2a3c;
+}
+
+.columns {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.section {
+  width:27%;
+  height: 100%;
+  border: 2px solid #CCC;
+  display: inline-block;
+  margin: 0 5px;
+  max-width: 280px;
+  padding: 14px;
+  padding-top: 2px;
+  border-radius:  7px;
+  text-align: center;
+}
+
+.log_section {
+  width: 38%;
+  max-width: 400px;
+}
+
+.txt_emp_new, .txt_project_new {
+  width:150px;
+}
+
+.drop_log_emp_project {
+  margin: 0 auto;
+  width: 80%;
+  height: 70px;
+  border: 2px solid #ff9f40;
+  background: #fbecde;
+}
+
+.txt_log_time {
+  width: 60px;
+}
+
+.btn {
+    background-color: #e7e7e7;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #c3c3c3;
+}
+
+.btn_add {
+    padding: 6px 16px;
+    font-size: 14px;
+    margin: 4px 2px;
+}
+
+.list {
+ height: 320px;
+ margin: 10px 0;
+ border: 1px solid #ccc;
+}
+
+.log_list {
+  height: 221px;
+}
+
+.btn_save {
+    padding: 12px 32px;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.trash {
+  border: 8px solid #ff661e;
+  width: 180px;
+  height: 200px;
+  border-radius: 18px;
+  padding: 20px;
+  background: url(../images/trash_can.png) no-repeat center;
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.trash:after {
+  clear: both;
+}

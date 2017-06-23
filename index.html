@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8"http-equiv=Content-Type>
+  <title>Employee Time Log</title>
+  <link href=styles/index.css rel=stylesheet>
+  <script src="scripts/index.js"></script>>
+</head>
+
+<body>
+  <div class="main_container">
+    <div class="header">
+      <h1>Employee Time Log</h1>
+    </div>
+
+    <div class="main_body">
+      <div class="columns">
+        <div class="section emp_section">
+          <div class="emp_new">
+            <h3>Employee</h3>
+
+            <input type="text" placeholder="Employee" class="txt_emp_new" />
+            <button class="btn btn_add btn_emp_new" />ADD</button>
+          </div>
+
+          <div class="list emp_list">
+
+          </div>
+
+          <div class="emp_save">
+            <button class="btn btn_save btn_emp_save" />SAVE</button>
+          </div>
+        </div>
+
+        <div class="section log_section">
+          <h3>Time Log</h3>
+
+          <div class="log_new">
+            EMPLOYEE + PROJECT <div class="drop_log_emp_project"></div>
+            TIME <input type="text" class="txt_log_time" />
+            <button class="btn btn_add btn_log_new" />ADD TO LOG</button>
+          </div>
+
+          <div class="list log_list">
+          </div>
+
+          <div class="log_save">
+            <button class="btn btn_save btn_log_save" />SAVE</button>
+          </div>
+        </div>
+
+        <div class="section project_section">
+          <h3>Project</h3>
+
+          <div class="project_new">
+            <input type="text" placeholder="Project" class="txt_project_new" />
+            <button class="btn btn_add btn_project_new" />ADD</button>
+          </div>
+
+          <div class="list project_list">
+
+          </div>
+
+          <div class="project_save">
+            <button class="btn btn_save btn_project_save" />SAVE</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="trash">
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
