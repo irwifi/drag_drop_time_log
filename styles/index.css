@@ -15,7 +15,7 @@
 }
 
 .columns {
-  height: 500px;
+  height: 540px;
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
@@ -40,19 +40,23 @@
 }
 
 .txt_emp_new, .txt_project_new {
-  width:150px;
+  width:130px;
+  padding: 0 10px;
 }
 
 .drop_log_emp_project {
-  margin: 0 auto;
+  margin: 10px auto;
   width: 80%;
-  height: 70px;
+  height: 105px;
   border: 2px solid #ff9f40;
   background: #fbecde;
+  background: linear-gradient(to bottom, #eafbff 0%, #eafbff 50%, #fffaea 50%, #fffaea 100%);
+  font-size: 32px;
 }
 
 .txt_log_time {
-  width: 60px;
+  width: 30px;
+  padding: 0 10px;
 }
 
 .btn {
@@ -76,13 +80,62 @@
 }
 
 .list {
- height: 320px;
+ height: 350px;
  margin: 10px 0;
  border: 1px solid #ccc;
+ padding: 5px 10px;
+ overflow: auto;
 }
 
 .log_list {
-  height: 221px;
+  height: 230px;
+}
+
+.employee {
+  text-align: left;
+  background: #3cf;
+  margin: 3px;
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  padding: 8px 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: move;
+}
+
+.emp_label {
+  display: inline-block;
+}
+
+.emp_hour {
+  float: right;
+  background-color: white;
+  width: 50px;
+  color: #3cf;
+  text-align: center;
+  border-radius: 4px;
+  margin-right: -4px;
+}
+
+.project {
+  text-align: center;
+  background: #ffd24c;
+  margin: 3px 16px;
+  height: 32px;
+  line-height: 32px;
+  padding: 8px 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: move;
+}
+
+.hidden {
+  display: none;
 }
 
 .btn_save {
@@ -93,11 +146,12 @@
 
 .trash {
   border: 8px solid #ff661e;
-  width: 180px;
-  height: 200px;
+  width: 140px;
+  height: 150px;
   border-radius: 18px;
   padding: 20px;
   background: url(../images/trash_can.png) no-repeat center;
+  background-size: 140px;
   float: right;
   margin-right: 10px;
   cursor: pointer;

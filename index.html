@@ -4,7 +4,6 @@
   <meta content="text/html; charset=UTF-8"http-equiv=Content-Type>
   <title>Employee Time Log</title>
   <link href=styles/index.css rel=stylesheet>
-  <script src="scripts/index.js"></script>>
 </head>
 
 <body>
@@ -20,15 +19,18 @@
             <h3>Employee</h3>
 
             <input type="text" placeholder="Employee" class="txt_emp_new" />
-            <button class="btn btn_add btn_emp_new" />ADD</button>
+            <button class="btn btn_add btn_emp_new">ADD</button>
           </div>
 
           <div class="list emp_list">
-
+            <div id="emp0" class="draggable employee hidden" data-next="1">
+              <div class="emp_label">Emp 0</div>
+              <div class="emp_hour">10</div>
+            </div>
           </div>
 
           <div class="emp_save">
-            <button class="btn btn_save btn_emp_save" />SAVE</button>
+            <button class="btn btn_save btn_emp_save">SAVE</button>
           </div>
         </div>
 
@@ -36,16 +38,16 @@
           <h3>Time Log</h3>
 
           <div class="log_new">
-            EMPLOYEE + PROJECT <div class="drop_log_emp_project"></div>
+            <div class="drop_log_emp_project">EMPLOYEE <br/> PROJECT</div>
             TIME <input type="text" class="txt_log_time" />
-            <button class="btn btn_add btn_log_new" />ADD TO LOG</button>
+            <button class="btn btn_add btn_log_new">ADD TO LOG</button>
           </div>
 
           <div class="list log_list">
           </div>
 
           <div class="log_save">
-            <button class="btn btn_save btn_log_save" />SAVE</button>
+            <button class="btn btn_save btn_log_save">SAVE</button>
           </div>
         </div>
 
@@ -54,15 +56,17 @@
 
           <div class="project_new">
             <input type="text" placeholder="Project" class="txt_project_new" />
-            <button class="btn btn_add btn_project_new" />ADD</button>
+            <button class="btn btn_add btn_project_new">ADD</button>
           </div>
 
           <div class="list project_list">
-
+            <div id="project0" class="draggable project hidden" data-next="1">
+              Project 0
+            </div>
           </div>
 
           <div class="project_save">
-            <button class="btn btn_save btn_project_save" />SAVE</button>
+            <button class="btn btn_save btn_project_save">SAVE</button>
           </div>
         </div>
       </div>
@@ -72,5 +76,9 @@
       </div>
     </div>
   </div>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
