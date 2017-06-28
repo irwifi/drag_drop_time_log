@@ -4,6 +4,8 @@ $(function() {
   // To clear the localStorage Cache
   // localStorage.clear();
 
+  load_default()
+
   init_draggable();
 
   $( ".trash" ).droppable({
@@ -79,9 +81,27 @@ $(".btn_log_new").on("click", function() {
 });
 
 $(".btn_emp_save").on("click", function() {
-  // json_obj = {"account": true, "bill_cycle": true, "budget_billing": true, "credit_ranking": true, "first_name": true, "last_invoice": true, "last_payment": true, "last_name": true, "meter_type": false, "next_cycle": true, "outage_notif": true, "pap": true, "paperless": true, "service_pwr": true, "service_wtr": true};
-  // localStorage.setItem("emp_list", JSON.stringify(json_obj));
+  $("li").each(function() {
+    var el = $.fn[ev];
+    $.fn[ev] = function () {
+      this.trigger(ev);
+      return el.apply(this, arguments);
+    };
+  });
+  var emp_list = [{"label": "Emp1", "hour": 10}, {"label": "Emp 2", "hour": 7}, {"label": "Emp3", "hour": 5}, {"label": "Emp4", "hour": 8}];
+  localStorage.setItem("emp_list", JSON.stringify(emp_list));
 });
+
+function load_default() {
+  var emp_list = JSON.parse(localStorage.getItem("emp_list"));
+  for(var emp in emp_list) {
+    next_id = $( "#emp0" ).attr("data-next");
+    $( "#emp0" ).clone().attr({"id": "emp" + next_id, "data-id": "emp" + next_id}).removeClass("hidden").appendTo( ".emp_list" );
+    $( "#emp" + next_id + " .emp_label" ).text(emp_list[emp].label);
+    $( "#emp" + next_id + " .emp_hour" ).text(emp_list[emp].hour);
+    $( "#emp0" ).attr("data-next", +next_id + 1);
+  }
+}
 
 function init_draggable() {
   $( ".draggable" ).draggable({
